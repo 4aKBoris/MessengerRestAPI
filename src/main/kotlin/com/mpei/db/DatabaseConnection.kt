@@ -7,6 +7,6 @@ object DatabaseConnection {
         url = "jdbc:mysql://localhost:3306/restapi",
         driver = "com.mysql.cj.jdbc.Driver",
         user = "root",
-        password = "127485ldaLDA$$$"
+        password = "127485ldaLDA$$$",
     )
 }

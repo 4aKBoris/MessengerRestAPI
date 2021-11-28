@@ -20,7 +20,7 @@ import java.time.LocalDateTime
 fun Application.noAuthorizationRouting(db: Database) {
 
     val m = MessageEntity
-    
+
     routing {
 
         get(checkPhoneNumber) {
