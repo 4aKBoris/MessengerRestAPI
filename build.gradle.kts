@@ -52,6 +52,7 @@ dependencies {
     implementation("io.ktor:ktor-webjars:$ktor_version")
     implementation("org.ktorm:ktorm-core:$ktorm_version")
     implementation("mysql:mysql-connector-java:8.0.27")
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.3.1")
     implementation("org.webjars:jquery:3.6.0")
     implementation("io.ktor:ktor-server-netty:$ktor_version")
     implementation("ch.qos.logback:logback-classic:$logback_version")
