@@ -26,6 +26,3 @@ fun Application.installAuthentication(db: Database) {
 }
 
 private const val RealM = "RestAPI"
-
-private fun getDigest(str: String): ByteArray =
-    MessageDigest.getInstance("MD5").digest(str.toByteArray(Charsets.UTF_8))
