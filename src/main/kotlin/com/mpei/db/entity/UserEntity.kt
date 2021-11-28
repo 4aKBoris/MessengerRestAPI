@@ -9,4 +9,5 @@ object UserEntity: Table<Nothing>("users") {
     val firstName = varchar("first_name")
     val lastName = varchar("last_name")
     val icon = blob("icon")
+    val registrationDate = datetime("registrationDate")
 }
