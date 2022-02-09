@@ -16,7 +16,7 @@ fun Application.configureRouting() {
 
     noAuthorizationRouting(db = db)
 
-    authenticateRouting(db = db)
+    chatRouting(db)
 
 }
 

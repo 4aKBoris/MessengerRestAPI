@@ -8,6 +8,5 @@ object UserEntity: Table<Nothing>("users") {
     val password = bytes("password")
     val firstName = varchar("first_name")
     val lastName = varchar("last_name")
-    val icon = blob("icon")
     val registrationDate = datetime("registrationDate")
 }
