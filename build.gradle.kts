@@ -6,7 +6,7 @@ val ktorm_version: String by project
 
 plugins {
     application
-    kotlin("jvm") version "1.6.10"
+    kotlin("jvm") version "1.6.20"
     id("org.jetbrains.kotlin.plugin.serialization") version "1.6.0"
 }
 
@@ -45,7 +45,7 @@ dependencies {
     implementation("org.jetbrains:kotlin-css-jvm:1.0.0-pre.129-kotlin-1.4.20")
     implementation("io.ktor:ktor-metrics:$ktor_version")
     implementation("io.ktor:ktor-metrics-micrometer:$ktor_version")
-    implementation("io.micrometer:micrometer-registry-prometheus:1.8.2")
+    implementation("io.micrometer:micrometer-registry-prometheus:1.8.4")
     implementation("io.ktor:ktor-webjars:$ktor_version")
     implementation("org.ktorm:ktorm-core:$ktorm_version")
     implementation("mysql:mysql-connector-java:8.0.27")

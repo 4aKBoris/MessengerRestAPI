@@ -1,7 +1,7 @@
 package com.mpei.routing
 
 import com.mpei.db.data.*
-import com.mpei.db.entity.Icon
+import com.mpei.db.entity.IconEntity
 import com.mpei.db.entity.MessageEntity
 import com.mpei.db.entity.UserEntity
 import io.ktor.application.*
@@ -146,14 +146,14 @@ fun Application.chatRouting(db: Database) {
             }
 
             put(icon) {
-                val icon = call.receive<com.mpei.db.data.Icon>()
+                val icon = call.receive<Icon>()
 
                 val phoneNumber = call.principal<UserIdPrincipal>()!!.name
 
                 val idUser = getId(phoneNumber = phoneNumber, db = db)!!
 
-                db.update(Icon) {
-                    set(Icon.icon, icon.icon)
+                db.update(IconEntity) {
+                    set(IconEntity.icon, icon.icon)
                     where { it.idUser eq idUser }
                 }
 

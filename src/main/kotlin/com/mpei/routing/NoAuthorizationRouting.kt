@@ -1,7 +1,7 @@
 package com.mpei.routing
 
 import com.mpei.db.data.UserRegistration
-import com.mpei.db.entity.Icon
+import com.mpei.db.entity.IconEntity
 import com.mpei.db.entity.MessageEntity
 import com.mpei.db.entity.UserEntity
 import io.ktor.application.*
@@ -36,8 +36,8 @@ fun Application.noAuthorizationRouting(db: Database) {
         get("/icon") {
             val id = call.parameters["id"]!!.toInt()
 
-            val icon = db.from(Icon).select().where { (Icon.idUser eq id) }
-                .map { it[Icon.icon] }.first() ?: File("avatar.jpg").readBytes()
+            val icon = db.from(IconEntity).select().where { (IconEntity.idUser eq id) }
+                .map { it[IconEntity.icon] }.first() ?: File("avatar.jpg").readBytes()
 
             call.respondBytes(icon)
         }
@@ -64,7 +64,7 @@ fun Application.noAuthorizationRouting(db: Database) {
 
                 val idUser = getId(phoneNumber = user.phoneNumber, db = db)
 
-                db.insert(Icon) {
+                db.insert(IconEntity) {
                     set(it.idUser, idUser)
                     set(it.icon, icon)
                 }
