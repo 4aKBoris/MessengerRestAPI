@@ -91,10 +91,6 @@ fun Application.chatRouting(db: Database) {
                 call.respond(fullUser)
             }
 
-            get(check) {
-                call.respond(true)
-            }
-
             get(password) {
                 val phoneNumber = call.principal<UserIdPrincipal>()!!.name
 
@@ -209,5 +205,3 @@ private const val data = "/data"
 private const val icon = "/icon"
 
 private const val password = "/password"
-
-private const val check = "/check"
